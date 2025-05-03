@@ -6,7 +6,7 @@
 /*   By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 17:40:19 by svereten          #+#    #+#             */
-/*   Updated: 2025/05/02 17:53:56 by svereten         ###   ########.fr       */
+/*   Updated: 2025/05/03 17:33:52 by svereten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CLAPTRAP_HPP
@@ -28,10 +28,11 @@ public:
 	void		beRepaired(unsigned int amount);
 
 private:
-	std::string		_name;
-	unsigned int	_hp = 10;
-	unsigned int	_ep = 10;
-	unsigned int	_attack = 0;
+	std::string			_name;
+	unsigned int		_hp;
+	unsigned int	_max_hp;
+	unsigned int		_ep;
+	unsigned int		_attack;
 };
 
 #endif
