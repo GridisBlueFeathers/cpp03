@@ -6,24 +6,21 @@
 /*   By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 17:58:08 by svereten          #+#    #+#             */
-/*   Updated: 2025/05/04 13:21:07 by svereten         ###   ########.fr       */
+/*   Updated: 2025/05/04 13:24:21 by svereten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap(): ClapTrap("John", 100, 50, 20)
-{
+ScavTrap::ScavTrap(): ClapTrap("John", 100, 50, 20) {
 	std::cout << "ScavTrap " << getName() << " ready!\n";
 }
 
-ScavTrap::ScavTrap(const std::string &name): ClapTrap(name, 100, 50, 20)
-{
+ScavTrap::ScavTrap(const std::string &name): ClapTrap(name, 100, 50, 20) {
 	std::cout << "ScavTrap " << getName() << " ready!\n";
 }
 
-ScavTrap::ScavTrap(const ScavTrap &scavTrap): ClapTrap(scavTrap)
-{
+ScavTrap::ScavTrap(const ScavTrap &scavTrap): ClapTrap(scavTrap) {
 	std::cout << "ScavTrap " << getName() << " ready!\n";
 }
 
@@ -43,7 +40,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &scavTrap) {
 }
 
 void	ScavTrap::attack(const std::string &target) {
-		if (!getHp()) {
+	if (!getHp()) {
 		std::cout << "ScavTrap " << getName()
 			<< " is dead and can't attack\n";
 		return ;
@@ -58,7 +55,6 @@ void	ScavTrap::attack(const std::string &target) {
 		<< ", causing " << getAttack()
 		<< " points of damage!\n";
 	setEp(getEp() - 1);
-	
 }
 
 void	ScavTrap::guardGate() {

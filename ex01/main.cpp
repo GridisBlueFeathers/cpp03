@@ -6,7 +6,7 @@
 /*   By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:47:50 by svereten          #+#    #+#             */
-/*   Updated: 2025/05/04 13:21:59 by svereten         ###   ########.fr       */
+/*   Updated: 2025/05/04 13:23:41 by svereten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ScavTrap.hpp"
@@ -17,7 +17,6 @@ int	main(void) {
 	ScavTrap	jane = ScavTrap("Jane");
 
 	jane = john;
-
 
 	trap.attack("1");
 	trap.attack("2");

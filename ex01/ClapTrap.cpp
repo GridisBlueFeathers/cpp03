@@ -6,7 +6,7 @@
 /*   By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 17:46:20 by svereten          #+#    #+#             */
-/*   Updated: 2025/05/04 13:11:17 by svereten         ###   ########.fr       */
+/*   Updated: 2025/05/04 13:25:19 by svereten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ClapTrap.hpp"
@@ -47,7 +47,7 @@ ClapTrap::ClapTrap(
 	unsigned int hp,
 	unsigned int ep,
 	unsigned int attack
-) :
+):
 	_name(name),
 	_hp(hp),
 	_maxHp(_hp),
