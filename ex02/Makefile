@@ -6,7 +6,7 @@
 #    By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/02 17:39:22 by svereten          #+#    #+#              #
-#    Updated: 2025/05/04 13:45:36 by svereten         ###   ########.fr        #
+#    Updated: 2025/05/04 16:32:54 by svereten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = ex02
@@ -35,7 +35,7 @@ ${NAME}: ${OBJS}
 	${CXX} ${CXXFLAGS} $^ -o $@
 
 ${OBJ_DIR}/%.o: %.cpp | ${OBJ_DIRS}
-	bear --append -- ${CXX} ${CXXFLAGS} -D DEBUG=${DEBUG} -c $< -o $@
+	${CXX} ${CXXFLAGS} -D DEBUG=${DEBUG} -c $< -o $@
 
 ${OBJ_DIRS}:
 	mkdir -p $@
@@ -44,7 +44,6 @@ ${OBJ_DIRS}:
 
 clean:
 	rm -rf ${OBJ_DIR}
-	rm -rf compile_commands.json
 
 fclean: clean
 	rm -rf ${NAME}
