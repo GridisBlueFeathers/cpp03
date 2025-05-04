@@ -6,7 +6,7 @@
 /*   By: svereten <svereten@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:47:50 by svereten          #+#    #+#             */
-/*   Updated: 2025/05/04 13:47:57 by svereten         ###   ########.fr       */
+/*   Updated: 2025/05/04 15:22:08 by svereten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "FragTrap.hpp"
@@ -14,7 +14,8 @@
 int	main(void) {
 	FragTrap	trap("Johnny");
 	FragTrap	john;
-	FragTrap	jane = FragTrap(john);
+	FragTrap	jane(john);
+	FragTrap	*heaper = new FragTrap("heaper");
 
 	jane = john;
 
@@ -44,4 +45,5 @@ int	main(void) {
 	trap.highFiveGuys();
 	trap.highFiveGuys();
 
+	delete heaper;
 }
